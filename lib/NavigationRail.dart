@@ -9,16 +9,6 @@ class RailBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var toSelect = Provider.of<PageState>(context);
     return Scaffold(
-      appBar: AppBar(
-        actions: <Widget>[
-          Text(
-            "Settings",
-            style: TextStyle(color: Colors.white),
-            textAlign: TextAlign.center,
-            textHeightBehavior: TextHeightBehavior.fromEncoded(5),
-          )
-        ],
-      ),
       body: Row(
         children: <Widget>[
           NavigationRail(
@@ -40,14 +30,34 @@ class RailBarWidget extends StatelessWidget {
                 label: Text('Dashboard'),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.bookmark_border),
+                icon: Icon(Icons.person),
                 // selectedIcon: Icon(Icons.book),
-                label: Text('Second'),
+                label: Text('Clients'),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.star_border),
+                icon: Icon(Icons.shopping_bag_outlined),
                 // selectedIcon: Icon(Icons.star),
-                label: Text('Third'),
+                label: Text('Products'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.shopping_cart_outlined),
+                // selectedIcon: Icon(Icons.star),
+                label: Text('Orders'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.chat_bubble_outline),
+                // selectedIcon: Icon(Icons.star),
+                label: Text('Chats'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.bookmark_border),
+                // selectedIcon: Icon(Icons.star),
+                label: Text('Discounts'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.settings_sharp),
+                // selectedIcon: Icon(Icons.star),
+                label: Text('Settings'),
               ),
             ],
           ),

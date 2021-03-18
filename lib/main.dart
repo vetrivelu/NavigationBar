@@ -32,3 +32,13 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+class MyLoginPage extends StatelessWidget {
+  final selectedIndex = PageState().pageState;
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: RailBarWidget(),
+    );
+  }
+}
